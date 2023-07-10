@@ -10,7 +10,7 @@
             @csrf
             <div class="mb-3">
               <label for="nama_wisma" class="form-label">Nama Wisma</label>
-              <input type="text" class="form-control rounded-1 @error('nama_wisma') is-invalid @enderror" id="nama_wisma" name="nama_wisma" required autofocus value="{{ old('nama_wi') }}">
+              <input type="text" class="form-control rounded-1 @error('nama_wisma') is-invalid @enderror" id="nama_wisma" name="nama_wisma" required autofocus value="{{ old('nama_wisma') }}">
               @error('nama_wisma')
                   <div class="invalid-feedback">
                     {{ $message }}

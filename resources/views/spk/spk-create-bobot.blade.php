@@ -8,7 +8,7 @@
             <h4 class="fw-bolder">Matriks Bobot</h4>
             <form action="" method="POST">
                 @csrf
-                <table class="table table-striped" style="font-size: 13px">
+                <table class="table table-striped">
                     <thead>
                         <tr class="text-center">
                             <th>Variabel</th>
@@ -23,381 +23,57 @@
                     <tbody>
                         <tr>
                             <td>Harga</td>
-							<td style="width: 200px" class="text-center">
-                                <select name="hh" id="hh">
-                                    <option value="1">Sama Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="hb" id="hb">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px">
-                                <select name="ht" id="ht">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="hk" id="hk">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="hm" id="hm">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px">
-                                <select name="hd" id="hd">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
+							<td><input type="number" name="k1" value="{{ $hh }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k2" value="{{ $hb }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k3" value="{{ $ht }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k4" value="{{ $hk }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k5" value="{{ $hm }}" style="width: 200px" class="text-center"></td>
+                            <td><input type="number" name="k6" value="{{ $hd }}" style="width: 200px" class="text-center"></td>
                         </tr>
                         <tr>
                             <td>Luas Parkir m2</td>
-							<td style="width: 200px">
-                                <select name="bh" id="bh">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px" class="text-center">
-                                <select name="bb" id="bb">
-                                    <option value="1">Sama Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="bt" id="bt">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="bk" id="bk">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="bm" id="bm">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px">
-                                <select name="bd" id="bd">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
+							<td><input type="number" name="k1" value="{{ $bh }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k2" value="{{ $bb }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k3" value="{{ $bt }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k4" value="{{ $bk }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k5" value="{{ $bm }}" style="width: 200px" class="text-center"></td>
+                            <td><input type="number" name="k6" value="{{ $bd }}" style="width: 200px" class="text-center"></td>
                         </tr>
                         <tr>
                             <td>Luas Kamar m2</td>
-							<td style="width: 200px">
-                                <select name="th" id="th">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="tb" id="tb">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px" class="text-center">
-                                <select name="tt" id="tt">
-                                    <option value="1">Sama Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="tk" id="tk">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="tm" id="tm">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px">
-                                <select name="td" id="td">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
+							<td><input type="number" name="k1" value="{{ $th }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k2" value="{{ $tb }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k3" value="{{ $tt }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k4" value="{{ $tk }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k5" value="{{ $tm }}" style="width: 200px" class="text-center"></td>
+                            <td><input type="number" name="k6" value="{{ $td }}" style="width: 200px" class="text-center"></td>
                         </tr>
                         <tr>
                             <td>Jumlah Kasur</td>
-							<td style="width: 200px">
-                                <select name="kh" id="kh">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="kb" id="kb">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="kt" id="kt">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px" class="text-center">
-                                <select name="kk" id="kk">
-                                    <option value="1">Sama Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="km" id="km">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px">
-                                <select name="kd" id="kd">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
+							<td><input type="number" name="k1" value="{{ $kh }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k2" value="{{ $kb }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k3" value="{{ $kt }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k4" value="{{ $kk }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k5" value="{{ $km }}" style="width: 200px" class="text-center"></td>
+                            <td><input type="number" name="k6" value="{{ $kd }}" style="width: 200px" class="text-center"></td>
                         </tr>
                         <tr>
                             <td>Kamar Mandi</td>
-							<td style="width: 200px">
-                                <select name="mh" id="mh">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="mb" id="mb">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="mt" id="mt">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="mk" id="mk">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px" class="text-center">
-                                <select name="mm" id="mm">
-                                    <option value="1">Sama Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px">
-                                <select name="md" id="md">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
+							<td><input type="number" name="k1" value="{{ $mh }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k2" value="{{ $mb }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k3" value="{{ $mt }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k4" value="{{ $mk }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k5" value="{{ $mm }}" style="width: 200px" class="text-center"></td>
+                            <td><input type="number" name="k6" value="{{ $md }}" style="width: 200px" class="text-center"></td>
                         </tr>
                         <tr>
                             <td>Daya Tampung Tamu</td>
-							<td style="width: 200px">
-                                <select name="dh" id="dh">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="db" id="db">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="dt" id="dt">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="dk" id="dk">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-							<td style="width: 200px">
-                                <select name="dm" id="dm">
-                                    <option value="7">Sangat Lebih Penting</option>
-                                    <option value="5">Lebih Penting</option>
-                                    <option value="3">Cukup Penting</option>
-                                    <option value="1">Sama Penting</option>
-                                    <option value="0.3333333333">Tidak Cukup Penting</option>
-                                    <option value="0.2">Tidak Lebih Penting</option>
-                                    <option value="0.1428571429">Sangat Tidak Lebih Penting</option>
-                                </select>
-                            </td>
-                            <td style="width: 200px" class="text-center">
-                                <select name="dd" id="dd">
-                                    <option value="1">Sama Penting</option>
-                                </select>
-                            </td>
+							<td><input type="number" name="k1" value="{{ $dh }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k2" value="{{ $db }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k3" value="{{ $dt }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k4" value="{{ $dk }}" style="width: 200px" class="text-center"></td>
+							<td><input type="number" name="k5" value="{{ $dm }}" style="width: 200px" class="text-center"></td>
+                            <td><input type="number" name="k6" value="{{ $dd }}" style="width: 200px" class="text-center"></td>
                         </tr>
                     </tbody>
                 </table>
